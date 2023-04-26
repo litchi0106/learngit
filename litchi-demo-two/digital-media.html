@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1, user-scalable=no" />
+ <link rel="shortcut icon" href="images/favicon.ico" />
+ <title>digital-media</title>
+ <style>
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	background-color: #bc2946;
+}
+.bg {
+	grid-area: 1/1/4/4;
+	justify-self: center;
+	align-self: center;
+}
+p {
+	grid-area: 3/2/4/3;
+	justify-self: center;
+	align-self: end;
+	background-color: #bc2946;
+	height: 35%;
+	width: 30%;
+	text-align: center;
+}
+p a {
+	text-decoration: none;
+	font-size: 1.5rem;
+	color: #eee4e1;
+}
+ @media only screen and (max-width: 1200px) {
+.bg img {
+	width: 100%;
+	height: auto;
+}
+p {
+	grid-area: 3/2/4/3;
+	justify-self: center;
+	align-self: end;
+	background-color: #bc2946;
+	height: 35%;
+	width: 30%;
+	text-align: center;
+	font-size: 1.5rem;
+	color: #eee4e1;
+}
+}
+ @media only screen and (max-width: 980px) {
+.bg img {
+	width: 100%;
+	height: auto;
+}
+p {
+	grid-area: 3/2/4/3;
+	justify-self: center;
+	align-self: end;
+	background-color: #bc2946;
+	height: 35%;
+	width: 30%;
+	text-align: center;
+	font-size: 1.2rem;
+	color: #eee4e1;
+}
+}
+@media only screen and (max-width: 640px) {
+.bg img {
+	width: 100%;
+	height: auto;
+}
+p {
+	grid-area: 3/2/4/3;
+	justify-self: center;
+	align-self: end;
+	background-color: #bc2946;
+	height: 35%;
+	width: 30%;
+	text-align: center;
+	font-size: 1rem;
+	color: #eee4e1;
+}
+}
+</style>
+ </head>
+
+ <body>
+ <div class="container">
+   <div class="bg"><img src="images/digital_03.png"></div>
+   <p class="back"><a href="litchi-production.html">back</a></p>
+ </div>
+</body>
+</html>

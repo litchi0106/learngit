@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1, user-scalable=no" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/production.css"/>
+<title>litchi-production</title>
+<style>
+@media only screen and (max-width: 980px) {
+.container {
+	display: grid;
+	grid-template-columns: 5rem 5rem 1fr 1fr 1fr 1fr 5rem 5rem;
+	grid-template-rows: 13% 15% 10% 60%;
+}
+.had-img img {
+	width: 100%;
+	height: auto;
+}
+.home-img img {
+	width: 100%;
+	height: auto;
+}
+.h-pic img {
+	width: 100%;
+	height: auto;
+}
+.h-navexpe {
+	font-size: 1.2rem;
+}
+.h-navworks {
+	font-size: 1.2rem;
+}
+.h-navskill {
+	font-size: 1.2rem;
+}
+.min-pic img {
+	width: 100%;
+	height: auto;
+}
+.switch {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #eee4e1;
+}
+ul.slides {
+	position: relative;
+	width: 30rem;
+	height: 30vh;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #eee4e1;
+	;
+	overflow: hidden;
+}
+li.slide {
+	margin: 0;
+	padding: 0;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #eee4e1;
+	transition: .5s transform ease-in-out;
+}
+.slide:nth-of-type(1) {
+	background-color: #eee4e1;
+	background: center no-repeat url(images/p-instructions_19.png);
+	background-size: 30rem 30vh;
+	background-attachment: scroll;
+	width: 30rem;
+	height: 30vh;
+}
+.slide:nth-of-type(2) {
+	background-color: #eee4e1;
+	left: 100%;
+	background: center no-repeat;
+	background-attachment: scroll;
+	background-size: 30rem 30vh;
+	width: 30rem;
+	height: 30vh;
+}
+.slide:nth-of-type(3) {
+	background-color: #eee4e1;
+	background: center no-repeat url(images/p-mainkt_22.png);
+	background-attachment: scroll;
+	left: 200%;
+	background-size: 30rem 30vh;
+	width: 30rem;
+	height: 30vh;
+}
+input[type="radio"] {
+	position: relative;
+	z-index: 100;
+	display: none;
+}
+.controls-visible {
+	position: absolute;
+	width: 100%;
+	bottom: 23px;
+	text-align: center;
+}
+.controls-visible label {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background-color: #BC2946;
+	border-radius: 50%;
+	margin: 0 3px;
+	border: 2px solid #fff;
+}
+.slides input[type="radio"]:nth-of-type(1):checked~.controls-visible label:nth-of-type(1) {
+	background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(2):checked~.controls-visible label:nth-of-type(2) {
+	background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(3):checked~.controls-visible label:nth-of-type(3) {
+	background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(1):checked~.slide {
+	transform: translatex(0%);
+}
+.slides input[type="radio"]:nth-of-type(2):checked~.slide {
+	transform: translatex(-100%);
+}
+.slides input[type="radio"]:nth-of-type(3):checked~.slide {
+	transform: translatex(-200%);
+}
+.navigator {
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	width: 100%;
+	z-index: 100;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	display: none;
+}
+.navigator i {
+	font-size: 32px;
+	color : #BC2946;
+}
+.slides input[type="radio"]:nth-of-type(1):checked~.navigator:nth-of-type(1) {
+	display: flex;
+}
+.slides input[type="radio"]:nth-of-type(2):checked~.navigator:nth-of-type(2) {
+	display: flex;
+}
+.slides input[type="radio"]:nth-of-type(3):checked~.navigator:nth-of-type(3) {
+	display: flex;
+}
+}
+ @media only screen and (max-width: 640px) {
+.container {
+	display: grid;
+	grid-template-columns: 2rem 2rem 1fr 1fr 1fr 1fr 2rem 2rem;
+	grid-template-rows: 13% 15% 10% 60%;
+}
+.had-img img {
+	width: 100%;
+	height: auto;
+}
+.home-img img {
+	width: 100%;
+	height: auto;
+}
+.h-navexpe {
+	font-size: 1rem;
+}
+.h-navworks {
+	font-size: 1rem;
+}
+.h-navskill {
+	font-size: 1rem;
+}
+.h-navhome:hover {
+	font-size: 1.6rem;
+}
+.h-navexpe:hover {
+	font-size: 1.6rem;
+}
+.h-navworks:hover {
+	font-size: 1.6rem;
+}
+.h-navskill:hover {
+	font-size: 1.6rem;
+}
+.h-navhome:hover {
+	font-size: 1.2rem;
+}
+.h-navexpe:hover {
+	font-size: 1.2rem;
+}
+.h-navworks:hover {
+	font-size: 1.2rem;
+}
+.h-navskill:hover {
+	font-size: 1.2rem;
+}
+.min-pic img {
+	width: 100%;
+	height: auto;
+}
+.min ul li {
+	font-size: 1rem;
+}
+.min ul li a {
+	font-size: 1rem;
+}
+.switch {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #eee4e1;
+}
+ul.slides {
+	position: relative;
+	width: 20rem;
+	height: 20vh;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #eee4e1;
+	;
+	overflow: hidden;
+}
+li.slide {
+	margin: 0;
+	padding: 0;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #eee4e1;
+	transition: .5s transform ease-in-out;
+}
+.slide:nth-of-type(1) {
+	background-color: #eee4e1;
+	background: center no-repeat url(images/p-instructions_19.png);
+	background-size: 20rem 20vh;
+	background-attachment: scroll;
+	width: 20rem;
+	height: 20vh;
+}
+.slide:nth-of-type(2) {
+	background-color: #eee4e1;
+	left: 100%;
+	background: center no-repeat;
+	background-attachment: scroll;
+	background-size: 20rem 20vh;
+	width: 20rem;
+	height: 20vh;
+}
+.slide:nth-of-type(3) {
+	background-color: #eee4e1;
+	background: center no-repeat url(images/p-mainkt_22.png);
+	background-attachment: scroll;
+	left: 200%;
+	background-size: 20rem 20vh;
+	width: 20rem;
+	height: 20vh;
+}
+input[type="radio"] {
+	position: relative;
+	z-index: 100;
+	display: none;
+}
+.controls-visible {
+	position: absolute;
+	width: 100%;
+	bottom: 16px;
+	text-align: center;
+}
+.controls-visible label {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background-color: #BC2946;
+	border-radius: 50%;
+	margin: 0 3px;
+	border: 2px solid #fff;
+}
+.slides input[type="radio"]:nth-of-type(1):checked~.controls-visible label:nth-of-type(1) {
+	background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(2):checked~.controls-visible label:nth-of-type(2) {
+	background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(3):checked~.controls-visible label:nth-of-type(3) {
+	background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(1):checked~.slide {
+	transform: translatex(0%);
+}
+.slides input[type="radio"]:nth-of-type(2):checked~.slide {
+	transform: translatex(-100%);
+}
+.slides input[type="radio"]:nth-of-type(3):checked~.slide {
+	transform: translatex(-200%);
+}
+.navigator {
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	width: 100%;
+	z-index: 100;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	display: none;
+}
+.navigator i {
+	font-size: 32px;
+	color : #BC2946;
+}
+.slides input[type="radio"]:nth-of-type(1):checked~.navigator:nth-of-type(1) {
+	display: flex;
+}
+.slides input[type="radio"]:nth-of-type(2):checked~.navigator:nth-of-type(2) {
+	display: flex;
+}
+.slides input[type="radio"]:nth-of-type(3):checked~.navigator:nth-of-type(3) {
+	display: flex;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="bg-l"></div>
+  <div class="bg-r"></div>
+  <div class="bg-c"></div>
+  <div class="h-had">
+    <div class="had-img"><img src="images/p-had_03.png"/></div>
+  </div>
+  <div class="h-navlogo">
+    <div class="logo-img"><img src="images/h-navlogo_07.png"/></div>
+  </div>
+  <div class="h-navbg"><img src="images/h-navbg.png"/></div>
+  <div class="h-navhome">
+    <div class="home-img"><a href="litchi-production.html"><img src="images/p-navprodu_12.png"/></a></div>
+  </div>
+  <p class="h-navexpe"><a href="litchi-experience.html">经历</a></p>
+  <p class="h-navworks"><a href="litchi-homepage.html">主页</a></p>
+  <p class="h-navskill"><a href="litchi-skill.html">技能</a></p>
+  <div class="img-bg"><img src="images/litchiweb-fouth.png"/></div>
+  <div class="min">
+    <div class="min-pic">
+      <div class="switch">
+        <ul class="slides">
+          <input type="radio" id="control-1" name="control" checked>
+          <input type="radio" id="control-2" name="control">
+          <input type="radio" id="control-3" name="control">
+          <div class="navigator slide-1">
+            <label for="control-3"> 《 </label>
+            <label for="control-2"> 》 </label>
+          </div>
+          <div class="navigator slide-2">
+            <label for="control-1"> 《 </label>
+            <label for="control-3"> 》 </label>
+          </div>
+          <div class="navigator slide-3">
+            <label for="control-2"> 《 </label>
+            <label for="control-1"> 》 </label>
+          </div>
+          <li class="slide"></li>
+          <li class="slide">
+            <video width="260" height="160" controls>  
+              <source src="images/x15xld.mp4" type="video/mp4">
+            </video>
+            <video width="260" height="160" controls>
+              <source src="images/x30tkm.mp4" type="video/mp4">
+            </video>
+          </li>
+          <li class="slide"></li>
+          <div class="controls-visible">
+            <label for="control-1"></label>
+            <label for="control-2"></label>
+            <label for="control-3"></label>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <ul>
+      <li><a href="packing-design.html">包装设计</a></li>
+      <li><a href="digital-media.html">数字媒体</a></li>
+      <li><a href="Painting-works.html">绘画作品</a></li>
+      <li><a href="more.html">更多</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1, user-scalable=no" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+<title>litchi</title>
+<style>
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+html {
+	height: 100%;
+	width: 100%;
+	background-color: #BC2946;
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1rem 1fr 3fr 1fr 1fr;
+	grid-template-rows: 5% 18% 20% 20% 15% 3% 12%;
+	grid-area: 1/1/7/9;
+	padding: 0px;
+}
+.white {
+	background-color: #eee4e1;
+	grid-area: 1/3/5/9;
+}
+.red-t {
+	background-color: #BC2946;
+	grid-area: 1/3/2/6;
+	-webkit-filter: opacity(90%);  /* Chrome, Safari, Opera */
+	filter: opacity(90%);
+}
+.eyes {
+	grid-area: 3/5/4/8;
+	justify-self: center;
+}
+.bg-img {
+	grid-area: 1/1/7/9;
+	z-index: 2;
+}
+.go {
+	grid-area: 4/2/6/5;
+	justify-self: end;
+	align-self: start;
+	z-index: 100;
+}
+.eyes img {
+	animation: fadenum 1.2s ease-in;
+	-webkit-animation-timing-function: cubic-bezier(x.17, y.67, x.83, y.67); /*动画频率，和transition-timing-function是一样的*/
+	-webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
+	-webkit-animation-direction: alternate;/*定义动画方式*/
+}
+@keyframes fadenum {
+ 100% {
+transform:scale(0, 0);
+}
+ 100% {
+transform:scale(0, 0);
+}
+ 100% {
+transform:scale(0, 0);
+}
+ 100% {
+transform:scale(0, 0);
+}
+ 100% {
+transform:scale(0, 0);
+}
+ 100% {
+transform:scale(0, 0);
+}
+ 80% {
+transform:scale(1, 0);
+}
+ 100% {
+transform:scale(0, 0);
+}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="white"></div>
+  <div class="red-t"></div>
+  <div class="eyes"><img src="images/first-eye.png" width="80%" height="100%"></div>
+  <div class="bg-img"><img src="images/litchiweb-five.png" width="100%"></div>
+  <div class="go" ><a href="litchi-homepage.html"><img src="images/go-three_03.png" width="97%"></a></div>
+</div>
+</body>
+</html>
